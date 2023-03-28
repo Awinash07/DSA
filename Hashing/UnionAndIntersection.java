@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class UnionAndIntersection {
     public static int union(int[] arr1, int[] arr2){
-        HashSet set = new HashSet<>();
+        HashSet<Integer> set = new HashSet<>();
         for(int i = 0 ; i < arr1.length ; i++){
             set.add(arr1[i]);
         }
@@ -18,8 +18,8 @@ public class UnionAndIntersection {
         return set.size();
     }
     public static int intersection(int[] arr1, int[] arr2){
-        Set set = new HashSet<>();
-        List list = new ArrayList<>();
+        Set<Integer> set = new HashSet<>();
+        List<Integer> list = new ArrayList<>();
         for(int i = 0;i < arr1.length; i++){
             set.add(arr1[i]);
         }
