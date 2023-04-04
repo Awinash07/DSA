@@ -3,7 +3,6 @@ package Hashing;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 public class ItienaryFromTickets {
     public static String getStart(HashMap<String,String> tickets){
