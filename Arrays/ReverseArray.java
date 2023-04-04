@@ -1,7 +1,10 @@
 package Arrays;
 
+// Iterative java program to reverse an
+// array
 public class ReverseArray {
 
+    /* Function to reverse arr[] from start to end*/
     public static void reverseArray(int arr[], int start, int end){
         int temp;
         while(start < end){
@@ -14,6 +17,7 @@ public class ReverseArray {
         }
     }
 
+    /* Utility that prints out an array on a line */
     public static void printArray(int arr[] , int size){
         for(int i = 0; i < size ; i++){
             System.out.print(arr[i]+" ");
