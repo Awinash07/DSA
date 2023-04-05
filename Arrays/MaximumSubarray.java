@@ -13,23 +13,32 @@ package Arrays;
 public class MaximumSubarray {
 
     public int maxSubArray(int arr[]){
-        int maxSum = 0;
+        int maxSum = Integer.MIN_VALUE;
         int currSum = 0;
+        int negativeSum = Integer.MIN_VALUE;
+
+        if(arr.length == 1){
+            maxSum = arr[0];
+            return maxSum;
+        }
         for(int i = 0; i < arr.length; i++){
             currSum = currSum + arr[i];
-            if(currSum > maxSum){
-                maxSum = currSum;
-            }
+            maxSum = Math.max(currSum, maxSum);
+
             if(currSum < 0){
+                negativeSum = Math.max(negativeSum, currSum);
                 currSum = 0;
             }
         }
+        maxSum = Math.max(maxSum, negativeSum);
         return maxSum;
     }
     public static void main(String[] args) {
         MaximumSubarray maximumSubarray = new MaximumSubarray(); 
         int arr[] = {-2,1,-3,4,-1,2,1,-5,4};
-        int maxSum = maximumSubarray.maxSubArray(arr);
+        int nums[] = {-1,-2};
+        int nums2[] ={1};
+        int maxSum = maximumSubarray.maxSubArray(nums2);
         System.out.println(maxSum);
     }
     
