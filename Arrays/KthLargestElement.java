@@ -25,13 +25,11 @@ public class KthLargestElement {
         Arrays.sort(nums);
         return nums[nums.length - k];
     }
-
     public static void main(String[] args) {
 
         int[] nums = {3,2,3,1,2,4,5,5,6};
         int k = 4;
         int kthLargestNo= kthLargest(nums, k);
         System.out.println(kthLargestNo);
-    }
-    
+    }   
 }
