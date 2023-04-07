@@ -1,11 +1,12 @@
 package SlidingWindow;
 
 public class findLargestSum {
-    public int findLargestSum(arr[] array){
+    public int findLargestSum(int[] array){
         return 0;
     }
-    
-}
-public static void main(String args[]){
+    public static void main(String args[]){
+
+    }
+
 
 }
