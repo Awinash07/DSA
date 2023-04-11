@@ -21,9 +21,9 @@ public class ActivitySelection {
     public static ArrayList<Integer> activitySelectionNotSorted(int[] start , int end[]){
         int activities[][] = new int[start.length][3];
         for(int i = 0; i < start.length; i++){
-            activities[i][0] =  i;
-            activities[i][1] = start[i];
-            activities[i][2] = end[i];
+            activities[i][0] =  i;//oth col idx
+            activities[i][1] = start[i];// 1st col start
+            activities[i][2] = end[i];// 2nd col end
         }
         Arrays.sort(activities, Comparator.comparingDouble(o -> o[2]));
         ArrayList<Integer> ans = new ArrayList<>();
