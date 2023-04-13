@@ -6,6 +6,10 @@
  *  A = [1,2,3]
  *  B = [2,1,3]
  *  ans = 0
+ *
+ *  a = {4,1,8,7};
+ *  b = {2,3,5,6};
+ *  ans = 6
  */
 
 
@@ -26,8 +30,8 @@ public class MinAbsDifference {
     }
 
     public static void main(String[] args){
-        int[] a = {4,1,8,7};
-        int[] b = {2,3,5,6};
+        int[] a = {1,2,3};
+        int[] b = {2,1,3};
         MinAbsDifference minAbsDifferencen = new MinAbsDifference();
         int result = minAbsDifferencen.minDiff(a,b);
         System.out.println(result);
