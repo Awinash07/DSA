@@ -18,7 +18,7 @@ public class RemoveConsecutiveCharacters {
             if(i < n-1 && s.charAt(i) == s.charAt(i+1)){
                 continue;
             }else{
-                result = result+s.charAt(i);
+                result = result + s.charAt(i);
             }
         }
         return result;
