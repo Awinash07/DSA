@@ -30,7 +30,6 @@ public static int[] findSumUsingHashing(int[] arr, int target){
         map.put(arr[i],i);
     }
     return result;
-
 }
 
     public static void main(String[] args) {
