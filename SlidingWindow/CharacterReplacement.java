@@ -1,5 +1,5 @@
 /**
- * Character replacement:
+ *424. Longest Repeating Character Replacement
  *
  *You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
  *
@@ -16,15 +16,26 @@
  * Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
  * The substring "BBBB" has the longest repeating letters, which is 4.
  */
-package Strings;
+package SlidingWindow;
 
 public class CharacterReplacement {
     public static int characterReplacement(String s, int k) {
-        return 0;
+        int head = 0 ,tail = 0, maxFreq = 0, maxLength = 0;
+        int[] count = new int[26];
+        for(head = 0; head < s.length(); head++ ){
+            maxFreq = Math.max(maxFreq, ++count[s.charAt(head) - 'A']);
+            while((head - tail + 1) - maxFreq > k){
+                count[s.charAt(tail) - 'A']--;
+                tail++;
+            }
+            maxLength = Math.max(maxLength, head-tail + 1);
+        }
+        return maxLength;
     }
-
-    public static void main(String[] args) {}
-
-
+    public static void main(String[] args) {
+        String  s = "ABAB";
+        int k = 2;
+        System.out.println(characterReplacement(s,k));
+    }
 }
 
