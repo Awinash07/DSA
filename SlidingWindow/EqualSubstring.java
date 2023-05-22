@@ -22,7 +22,7 @@ package SlidingWindow;
 
 public class EqualSubstring {
     public static int equalSubstring(String s, String t, int maxCost) {
-        int head = 0, tail = 0, ans =0, cost = 0;
+        int head = 0, tail = 0, ans = 0, cost = 0;
         for(head = 0; head < s.length(); head++){
             cost = cost + Math.abs((int)s.charAt(head) - (int)t.charAt(head));
             while(cost > maxCost){
