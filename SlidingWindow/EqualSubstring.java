@@ -30,6 +30,7 @@ public class EqualSubstring {
                 tail++;
             }
             ans = Math.max(ans, head - tail + 1);
+            break;
         }
         return ans;
     }
