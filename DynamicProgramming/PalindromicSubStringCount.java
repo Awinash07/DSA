@@ -1,3 +1,9 @@
+/*ques no 53/647- Palindromic Substring count 
+
+Given a string str of length N, you have to find number of palindromic subsequence (need not necessarily be distinct) present in the string str.
+Note: You have to return the answer module 109+7;
+*/
+
 package DynamicProgramming;
 
 public class PalindromicSubStringCount {
@@ -34,5 +40,4 @@ public class PalindromicSubStringCount {
         int count = palindromicSubStringCount.getCount(str);
         System.out.println(count);
     }
-    
 }
