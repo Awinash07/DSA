@@ -16,6 +16,7 @@ package DynamicProgramming;
 public class LongestPalindromicSubstring {
     public String longestPalindromicSubstring(String s){
         String longestString = "";
+        int maxLen = 0; 
         boolean[][] dp = new boolean[s.length()][s.length()];
         for(int g = 0 ; g < s.length(); g++){
             for(int i = 0, j = i+g ; j < s.length(); i++,j++){
@@ -35,13 +36,12 @@ public class LongestPalindromicSubstring {
                     }
                 }
                 if(dp[i][j]){
-                    String str = s.substring(i, j+1);
-                    if(str.length() > longestString.length()){
-                        longestString = str;
-                    }
+                    longestString = s.substring(i, j+1);
+                    maxLen = j;
                 }
             }
         }
+        System.out.println(maxLen);
         return longestString;
     }
     public static void main(String[] args){
@@ -49,6 +49,5 @@ public class LongestPalindromicSubstring {
         LongestPalindromicSubstring longestPalindromicSubstring = new LongestPalindromicSubstring();
         String string = longestPalindromicSubstring.longestPalindromicSubstring(str);
         System.out.println(string);
-    }
-    
+    }    
 }

@@ -31,6 +31,5 @@ public class EqualSumPartion {
         int[] nums = {1, 5, 11, 5};
         boolean result = equalSumPartion(nums);
         System.out.println("Can be partitioned into equal sum subsets: " + result);
-
     }
 }
