@@ -10,7 +10,7 @@ public class SubSetSumCount {
         }
         for(int i = 1 ; i <= n; i++){
             for(int w = 1 ; w <= sum ; w++){
-                if(w >= nums[i - 1]){\
+                if(w >= nums[i - 1]){
                     dp[i][w] = dp[i - 1][w] + dp[i - 1][w - nums[i-1]];
                 }else{
                     dp[i][w] = dp[i-1][w];
