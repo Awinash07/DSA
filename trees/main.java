@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class main {
     public static void main(String[] args){
@@ -15,6 +16,8 @@ public class main {
         System.out.println("pre order -> "+preOrder);
         ArrayList<Integer> postOrder = traversal.PostOrderTraversalIterative(root); 
         System.out.println("post order -> "+postOrder);
+        List<Integer> levelOrder = traversal.levelOrderTraversal(root);
+        System.out.println("level order -> "+levelOrder);
 
     }
     
