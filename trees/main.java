@@ -30,8 +30,12 @@ public class main {
         System.out.println("validBST -> "+isValidBST);
 
         KthSmallest kthSmallest = new KthSmallest();
-        int smallestNo= kthSmallest.kthSmallest(root, 2);
+        int smallestNo = kthSmallest.kthSmallest(root, 2);
         System.out.println("Kth smallest -> "+smallestNo);
+
+        SizeOfTree sizeOfTree = new SizeOfTree();
+        int treeSize = sizeOfTree.sizeOfTree(root);
+        System.out.println("treeSize -> "+treeSize);
 
     }
 }
