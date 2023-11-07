@@ -76,10 +76,11 @@ public class TreesTraversal {
 
     public List<Integer> levelOrderTraversal(TreeNode root){
         List<Integer> levelOrder = new ArrayList<>();
-        Queue<TreeNode> queue = new LinkedList<>();
         if(root == null){
             return levelOrder;
         }
+
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while(!queue.isEmpty()){
             TreeNode current = queue.poll();
@@ -92,6 +93,5 @@ public class TreesTraversal {
             }
         }
         return levelOrder;
-    }
-    
+    }    
 }
