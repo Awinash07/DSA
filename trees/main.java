@@ -29,9 +29,9 @@ public class main {
         boolean isValidBST = bst.isValidBST(root);
         System.out.println("validBST -> "+isValidBST);
 
-        KthLargest kthLargest = new KthLargest();
-        int largestNo= kthLargest.kthLargest(root, 2);
-        System.out.println("Kth largest -> "+largestNo);
+        KthSmallest kthSmallest = new KthSmallest();
+        int smallestNo= kthSmallest.kthSmallest(root, 2);
+        System.out.println("Kth smallest -> "+smallestNo);
 
     }
 }
