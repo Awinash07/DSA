@@ -37,5 +37,13 @@ public class main {
         int treeSize = sizeOfTree.sizeOfTree(root);
         System.out.println("treeSize -> "+treeSize);
 
+        MinDepth  minDepth = new MinDepth();
+        int minimumDepth = minDepth.minDepth(root);
+        System.out.println("Minimum Depth -> "+minimumDepth); 
+
+        NthNode nthNode = new NthNode();
+        TreeNode node = nthNode.nthNode(root,1);
+        System.out.println(node.data);
+
     }
 }
