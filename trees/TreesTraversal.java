@@ -36,7 +36,6 @@ public class TreesTraversal {
         while(!stack.isEmpty()){
             TreeNode current = stack.pop();
             preOrder.add(current.data);
-
             if(current.right != null){
                 stack.push(current.right);
             }
@@ -50,7 +49,6 @@ public class TreesTraversal {
     public ArrayList<Integer> PostOrderTraversalIterative(TreeNode root){
         Stack<TreeNode> stack = new Stack<>();
         ArrayList<Integer> postOrder = new ArrayList<>();
-
         if(root == null){
             return postOrder;
         }
@@ -79,7 +77,6 @@ public class TreesTraversal {
         if(root == null){
             return levelOrder;
         }
-
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while(!queue.isEmpty()){

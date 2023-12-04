@@ -5,11 +5,20 @@ public class main {
     public static void main(String[] args){
 
         TreesTraversal traversal = new TreesTraversal();
-        TreeNode root = new TreeNode(6);
+        /*TreeNode root = new TreeNode(6);
         root.left = new TreeNode(2);
         root.right = new TreeNode(10);
         root.left.left = new TreeNode(1);
+        root.left.right = new TreeNode(5);*/
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(7);
+        root.left.left.left = new TreeNode(8);
+        root.left.left.right = new TreeNode(9);
         //===============traversal============>
         ArrayList<Integer> inOrder = traversal.inOrderTraversalIterative(root); 
         System.out.println("in order -> "+inOrder);
@@ -43,7 +52,10 @@ public class main {
 
         NthNode nthNode = new NthNode();
         TreeNode node = nthNode.nthNode(root,1);
-        System.out.println(node.data);
+        System.out.println("nth Node -> "+node.data);
 
+        BoundaryTraversal boundaryTraversal = new BoundaryTraversal();
+        List<Integer> result = boundaryTraversal.boundaryTraversal(root);
+        System.out.println("boundaryTraversal -> "+result);
     }
 }
