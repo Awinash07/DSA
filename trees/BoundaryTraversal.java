@@ -19,7 +19,6 @@ public class BoundaryTraversal {
         Stack<TreeNode> stack = new Stack<>();
         while (node != null && (node.left != null || node.right != null)) {
             result.add(node.data);
-
             if (node.left != null) {
                 node = node.left;
             } else {
@@ -61,7 +60,6 @@ public class BoundaryTraversal {
         stack.push(root);
         while (!stack.isEmpty()) {
             TreeNode current = stack.pop();
-
             if (current.left == null && current.right == null) {
                 result.add(current.data);
             }

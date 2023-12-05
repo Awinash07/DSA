@@ -57,5 +57,9 @@ public class main {
         BoundaryTraversal boundaryTraversal = new BoundaryTraversal();
         List<Integer> result = boundaryTraversal.boundaryTraversal(root);
         System.out.println("boundaryTraversal -> "+result);
+
+        SizeOfTreeUsingLevelOrder sizeOfTreeUsingLevelOrder = new SizeOfTreeUsingLevelOrder();
+        int treeSizeUsingLevelOrder = sizeOfTreeUsingLevelOrder.sizeOfTreeUsingLevelOrder(root);
+        System.out.println("size of tree using level order traversing -> "+treeSizeUsingLevelOrder);
     }
 }
