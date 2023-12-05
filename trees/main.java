@@ -65,5 +65,9 @@ public class main {
         CountLeafNode countLeafNode = new CountLeafNode();
         int leafNodeCount = countLeafNode.countleafNode(root);
         System.out.println("Leaf node count -> "+leafNodeCount);
+
+        ReverseLevelOrder reverseLevelOrder = new ReverseLevelOrder();
+        List<List<Integer>> reverseLevelOrderList = reverseLevelOrder.reverseLevelOrder(root);
+        System.out.println("reversed level order -> "+reverseLevelOrderList);
     }
 }
