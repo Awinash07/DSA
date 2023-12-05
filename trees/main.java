@@ -61,5 +61,9 @@ public class main {
         SizeOfTreeUsingLevelOrder sizeOfTreeUsingLevelOrder = new SizeOfTreeUsingLevelOrder();
         int treeSizeUsingLevelOrder = sizeOfTreeUsingLevelOrder.sizeOfTreeUsingLevelOrder(root);
         System.out.println("size of tree using level order traversing -> "+treeSizeUsingLevelOrder);
+
+        CountLeafNode countLeafNode = new CountLeafNode();
+        int leafNodeCount = countLeafNode.countleafNode(root);
+        System.out.println("Leaf node count -> "+leafNodeCount);
     }
 }
