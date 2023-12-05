@@ -69,5 +69,9 @@ public class main {
         ReverseLevelOrder reverseLevelOrder = new ReverseLevelOrder();
         List<List<Integer>> reverseLevelOrderList = reverseLevelOrder.reverseLevelOrder(root);
         System.out.println("reversed level order -> "+reverseLevelOrderList);
+
+        ZigZagTraversal zigZagTraversal = new ZigZagTraversal();
+        List<List<Integer>> zigzagOrder = zigZagTraversal.zigzagTraversal(root);
+        System.out.println("zig zag traversal -> "+zigzagOrder);
     }
 }
