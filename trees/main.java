@@ -73,5 +73,9 @@ public class main {
         ZigZagTraversal zigZagTraversal = new ZigZagTraversal();
         List<List<Integer>> zigzagOrder = zigZagTraversal.zigzagTraversal(root);
         System.out.println("zig zag traversal -> "+zigzagOrder);
+
+        LevelAverage levelAverage = new LevelAverage();
+        List<Double> averages = levelAverage.levelAverage(root);
+        System.out.println("levelAverage -> "+averages);
     }
 }
