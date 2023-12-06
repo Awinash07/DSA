@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
-public class TreesTraversal {
+public class TreesTraversalRecursive {
 
     public ArrayList<Integer> inOrderTraversalIterative(TreeNode root){
         ArrayList<Integer> inOrder = new ArrayList<Integer>();

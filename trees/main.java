@@ -4,7 +4,7 @@ import java.util.List;
 public class main {
     public static void main(String[] args){
 
-        TreesTraversal traversal = new TreesTraversal();
+        TreesTraversalRecursive traversal = new TreesTraversalRecursive();
         /*TreeNode root = new TreeNode(6);
         root.left = new TreeNode(2);
         root.right = new TreeNode(10);
@@ -77,5 +77,9 @@ public class main {
         LevelAverage levelAverage = new LevelAverage();
         List<Double> averages = levelAverage.levelAverage(root);
         System.out.println("levelAverage -> "+averages);
+
+        FindLevelMax findLevelMax = new FindLevelMax();
+        List<Integer> findLevelMaxList = findLevelMax.findLevelMax(root);
+        System.out.println("Find max in each level -> "+findLevelMaxList);
     }
 }

@@ -2,7 +2,7 @@ package trees;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class TreeTraversal {
+public class TreeTraversalIterative {
 
     static class binaryTree{
         static int idx = -1;
