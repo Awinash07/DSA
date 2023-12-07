@@ -1,3 +1,5 @@
+import sun.reflect.generics.tree.Tree;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,5 +83,9 @@ public class main {
         FindLevelMax findLevelMax = new FindLevelMax();
         List<Integer> findLevelMaxList = findLevelMax.findLevelMax(root);
         System.out.println("Find max in each level -> "+findLevelMaxList);
+
+        FindSuccessor findSuccessor = new FindSuccessor();
+        TreeNode successor = findSuccessor.findSuccessor(root, 1);
+        System.out.println("find successor of given no -> "+successor.data);
     }
 }
