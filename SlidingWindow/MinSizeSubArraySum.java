@@ -20,5 +20,4 @@ public class MinSizeSubArraySum{
         System.out.println("Smallest subarray length: " + findMinSubArray(7, new int[] { 2, 1, 5, 2, 8 }));
         System.out.println("Smallest subarray length: " + findMinSubArray(8, new int[] { 3, 4, 1, 1, 6 }));
     }
-
 }
