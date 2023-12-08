@@ -1,7 +1,6 @@
 package SlidingWindow;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class AverageOfSubarrayOfSizeK {
     public static double[] averagesOfSubArrayOfSizeK(int[] arr, int k){
