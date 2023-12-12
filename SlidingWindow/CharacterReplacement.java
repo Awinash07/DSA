@@ -1,41 +1,35 @@
-/**
- *424. Longest Repeating Character Replacement
- *
- *You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
- *
- * Return the length of the longest substring containing the same letter you can get after performing the above operations.
- * Example 1:
- *
- * Input: s = "ABAB", k = 2
- * Output: 4
- * Explanation: Replace the two 'A's with two 'B's or vice versa.
- * Example 2:
- *
- * Input: s = "AABABBA", k = 1
- * Output: 4
- * Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
- * The substring "BBBB" has the longest repeating letters, which is 4.
- */
 package SlidingWindow;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CharacterReplacement {
-    public static int characterReplacement(String s, int k) {
-        int head = 0 ,tail = 0, maxFreq = 0, maxLength = 0;
-        int[] count = new int[26];
-        for(head = 0; head < s.length(); head++ ){
-            maxFreq = Math.max(maxFreq, ++count[s.charAt(head) - 'A']);
-            while((head - tail + 1) - maxFreq > k){
-                count[s.charAt(tail) - 'A']--;
-                tail++;
+    public static int findLength(String str, int k){
+        int windowStart = 0;
+        int maxLength = Integer.MIN_VALUE;
+        int maxRepeatLetterCount = 0;
+        Map<Character,Integer> letterFrequencyMap = new HashMap<>();
+        for(int windowEnd = 0; windowEnd < str.length(); windowEnd++){
+            char rightChar = str.charAt(windowEnd);
+            letterFrequencyMap.put(rightChar, letterFrequencyMap.getOrDefault(rightChar ,0)+1);
+            maxRepeatLetterCount = Math.max(maxRepeatLetterCount, letterFrequencyMap.get(rightChar));
+            // current window size is from windowStart to windowEnd, overall we have a letter which is
+            // repeating 'maxRepeatLetterCount' times, this means we can have a window which has one letter
+            // repeating 'maxRepeatLetterCount' times and the remaining letters we should replace.
+            // if the remaining letters are more than 'k', it is the time to shrink the window as we
+            // are not allowed to replace more than 'k' letters
+            while(windowEnd - windowStart +1 - maxRepeatLetterCount > k){
+                char leftChar = str.charAt(windowStart);
+                letterFrequencyMap.put(leftChar, letterFrequencyMap.get(leftChar) - 1);
+                windowStart++;
             }
-            maxLength = Math.max(maxLength, head-tail + 1);
+            maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
         }
         return maxLength;
     }
     public static void main(String[] args) {
-        String  s = "ABAB";
-        int k = 2;
-        System.out.println(characterReplacement(s,k));
+        System.out.println(CharacterReplacement.findLength("aabccbb", 2));
+        System.out.println(CharacterReplacement.findLength("abbcb", 1));
+        System.out.println(CharacterReplacement.findLength("abccde", 1));
     }
 }
-
