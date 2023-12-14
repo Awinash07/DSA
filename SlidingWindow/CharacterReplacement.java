@@ -18,7 +18,7 @@ public class CharacterReplacement {
             // repeating 'maxRepeatLetterCount' times and the remaining letters we should replace.
             // if the remaining letters are more than 'k', it is the time to shrink the window as we
             // are not allowed to replace more than 'k' letters
-            while(windowEnd - windowStart +1 - maxRepeatLetterCount > k){
+            while(windowEnd - windowStart +1 - maxRepeatLetterCount > k){// windowSize - max repeated letter = others letter in window > k(whose no should not exceed k)
                 char leftChar = str.charAt(windowStart);
                 letterFrequencyMap.put(leftChar, letterFrequencyMap.get(leftChar) - 1);
                 windowStart++;
