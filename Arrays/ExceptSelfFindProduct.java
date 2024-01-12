@@ -34,6 +34,5 @@ public class ExceptSelfFindProduct {
         for(int i : result){
             System.out.println(i);
         }
-
     }
 }
