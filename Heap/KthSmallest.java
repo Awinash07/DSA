@@ -23,5 +23,4 @@ public class KthSmallest {
         int no = kthSmallestElement(arr, 3);
         System.out.println(no);
     }
-    
 }
