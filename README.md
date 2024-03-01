@@ -27,6 +27,6 @@ Open a pull request with a descriptive title and explanation of your changes.
 Resources
 
 Feedback
-We welcome your feedback! If you have any suggestions, questions, or issues, please open an issue or contact maintainer_name.
+We welcome your feedback! If you have any suggestions, questions, or issues, please open an issue.
 
 Happy coding!
