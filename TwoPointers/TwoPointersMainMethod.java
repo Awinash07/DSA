@@ -6,6 +6,7 @@ public class TwoPointersMainMethod {
         // Inputs
         int[] arr = {1, 2, 3, 4, 6};
         int[] arrWithDuplicates = {1,1,2,2,5,5,4,4,3,3};
+        int[] negativeArray = {-1,-2,3,2};
 
         // Two sum Doc-problem 1
         TwoSum twoSum = new TwoSum();
@@ -28,5 +29,12 @@ public class TwoPointersMainMethod {
         RemoveKeyElement removeKeyElement =  new RemoveKeyElement();
         System.out.println(" Q-4 length of array having no key elements :"
                 + removeKeyElement.removeKeyElement(arrWithDuplicates, 2));
+
+        //Squaring a sorted array Doc_problem 5
+        SortedArraySquares sortedArraySquares = new SortedArraySquares();
+        int[]  sortedArraySquaresResult = sortedArraySquares.sortedArraySquares(negativeArray);
+        System.out.print(" Q-5 squaring a sorted array : review ");
+        for(int i = 0; i < sortedArraySquaresResult.length; i++) System.out.print(" "+sortedArraySquaresResult[i]+" ");
+
     }
 }
