@@ -13,6 +13,7 @@ public class TreesTraversalRecursive {
             return inOrder;
         }
         TreeNode current = root;
+
         while(current != null || !stack.isEmpty()){
             while(current != null){
                 stack.push(current);
