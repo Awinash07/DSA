@@ -25,5 +25,4 @@ public class ContainsDuplicates {
         boolean value = containsDuplicates(nums);
         System.out.println(value);
     }
-    
 }
